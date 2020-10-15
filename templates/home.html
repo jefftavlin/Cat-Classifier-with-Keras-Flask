@@ -1,0 +1,21 @@
+{%extends "layout.html"%}
+{%block content%}
+<script>
+function openWin() {
+  window.open("/upload");}
+</script>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img src="{{url_for('static', filename='dog-and-cat-cover.jpg')}}" align="middle" width =740, height = 400/>
+      <h2>Upload</h2>
+      <hr>
+      <form method="POST" action="" enctype="multipart/form-data">
+	      <p><input type="file" name="file"></p>
+	      <p><input type="submit" value="Submit"> <input type="button" value="Calculate Predictions", onclick="openWin()"></p>
+      </form>
+    </div>
+  </div>
+</div>
+{%endblock content%}
+
